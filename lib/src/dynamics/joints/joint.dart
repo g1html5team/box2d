@@ -79,8 +79,6 @@ abstract class Joint {
   bool _islandFlag = false;
   bool _collideConnected = false;
 
-  Object _userData;
-
   IWorldPool pool;
 
   // Cache here per time step to reduce cache misses.
@@ -98,7 +96,6 @@ abstract class Joint {
     _bodyB = def.bodyB;
     _collideConnected = def.collideConnected;
     _islandFlag = false;
-    _userData = def.userData;
 
     _edgeA = new JointEdge();
     _edgeA.joint = null;
